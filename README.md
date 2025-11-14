@@ -76,6 +76,9 @@ Optional twitter plugin for ElizaOS (requires Twitter API key)
 elizaos plugins add twitter
 ```
 
+Copy the `agent/.env.example` file to `agent/.env` and:
+1. Replace the `OPENAI_API_KEY` with your OpenAI API key. A temporary key will be provided to workshop attendees
+
 ```bash
 # Run the development server with hot reloading
 elizaos dev
