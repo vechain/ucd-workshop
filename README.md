@@ -12,7 +12,9 @@
 
 Hi there! :wave:
 
-In this workshop we will learn how to interact with the VeChain blockchain using [the VeChain SDK](https://docs.vechain.org/developer-resources/sdks-and-providers/sdk). Then, we will build an AI Agent on ElizaOS that can answer complex user prompts for blockchain data such as `what is my account balance?` and `hat is the last transaction for account 0xabcd...?` in real time.
+In this workshop we will learn how to interact with the VeChain blockchain using [the VeChain SDK](https://docs.vechain.org/developer-resources/sdks-and-providers/sdk). Armed with this knowledge we will build an AI Agent on [ElizaOS](https://elizaos.ai/) that understands blockchain related user prompts and interacts with the blockchain in real time. 
+
+By the end of the workshop you will have a working agent that answers prompts like `what is my account balance?` and `what is the last transaction for account 0xabcd...?` and you will know how to extend its capabilities to answer even more complex prompts.
 
 ## Table of Contents
 
@@ -20,11 +22,12 @@ In this workshop we will learn how to interact with the VeChain blockchain using
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Configuration](#configuration)
   - [License](#license)
   - [Acknowledgements](#acknowledgements)
 
 ## Getting Started
+
+> WIP
 
 ### Prerequisites
 
@@ -32,10 +35,6 @@ In this workshop we will learn how to interact with the VeChain blockchain using
 - [VS Code](https://code.visualstudio.com/)
 - [NodeJS](https://nodejs.org/en)
 - [Bun](https://bun.com/docs/installation)
-
-### Configuration
-
-Explain how to configure the project, if necessary.
 
 ### License
 
@@ -47,3 +46,8 @@ Special thanks to the following contributors :heart:
 - [@alexlofe](https://github.com/alexlofe)
 - [@n1no01](https://github.com/n1no01)
 - [@kgapos](https://github.com/kgapos)
+
+and the following projects and organizations:
+- [VeChain SDK](https://github.com/vechain/vechain-sdk-js)
+- [ElizaOS](https://elizaos.ai/)
+- [RZLT](https://www.rzlt.io/)
