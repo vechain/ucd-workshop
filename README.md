@@ -69,7 +69,6 @@ bun i -g @elizaos/cli
 elizaos --version
 # Install the project dependencies
 npm install
-# If you get the error `npm error ERESOLVE unable to resolve dependency tree`
 ```
 
 Optional twitter plugin for ElizaOS (requires Twitter API key)
