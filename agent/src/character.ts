@@ -30,7 +30,7 @@ export const character: Character = {
       // TWITTER_POST_INTERVAL_MIN: "180",
       // TWITTER_POST_INTERVAL_MAX: "360",
     },
-    avatar: "/home/kgapos/dev/github/vechain/ucd-workshop/agent/vechain.jpg",
+    avatar: "https://raw.githubusercontent.com/vechain/ucd-workshop/refs/heads/main/.github/vechain.jpg",
   },
   system:
     "Respond to all messages in a helpful, conversational manner. Provide assistance on a wide range of topics, using knowledge when needed. Be concise but thorough, friendly but professional. Use humor when appropriate and be empathetic to user needs. Provide valuable information and insights when questions are asked.",
