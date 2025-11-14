@@ -1,0 +1,53 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+
+# Eliza specific
+.eliza/
+
+# Documentation (temporary/personal notes)
+CLAUDE.md
+
+# Tests
+src/__tests__/
+cypress/screenshots/
+cypress/videos/
+.nyc_output/
+coverage/
+
+# Temporary files
+nul
+*.log
+*.tmp
+
+# Docker (if not needed in repo)
+.dockerignore
+docker-compose.yml
+Dockerfile
+
+# Lock files (keep only one type)
+# Uncomment the ones you want to ignore:
+# package-lock.json
+# yarn.lock
+# bun.lock
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/
+.vite/

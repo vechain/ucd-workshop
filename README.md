@@ -22,25 +22,86 @@ By the end of the workshop you will have a working agent that answers prompts li
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
+  - [Setup](#setup)
+    - [SDK setup](#sdk-setup)
+    - [Agent setup](#agent-setup)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ## Getting Started
-
-> WIP
 
 ### Prerequisites
 
 - A laptop with internet connection
-- [VS Code](https://code.visualstudio.com/)
-- [NodeJS](https://nodejs.org/en)
-- [Bun](https://bun.com/docs/installation)
+- [VS Code](https://code.visualstudio.com/), or similar code editor
+- [NodeJS](https://nodejs.org/en), tested with `v24.11.1`
+- [Bun](https://bun.com/docs/installation), tested with `v1.3.2`
 
-### License
+### Setup
+
+#### SDK setup
+
+Open your favorite terminal and run the following commands:
+```bash
+# Navigate the the `sdk` directory
+cd sdk
+# Install the project dependencies, such as the VeChain SDK
+npm install 
+```
+```bash
+# Run the `readBlocks.js` example script
+node examples/readBlocks.js
+```
+
+If you see the latest block data printed to the terminal at this point, you are ready to go!
+
+Feel free to explore and run more examples scripts.
+
+#### Agent setup
+
+Open your favorite terminal and run the following commands:
+```bash
+# Navigate to the `agent` directory
+cd agent
+# Install the ElizaOS CLI
+bun i -g @elizaos/cli
+# Check the version of the ElizaOS CLI
+elizaos --version
+# Install the project dependencies
+npm install
+# If you get the error `npm error ERESOLVE unable to resolve dependency tree`
+```
+
+Optional twitter plugin for ElizaOS (requires Twitter API key)
+```bash
+elizaos plugins add twitter
+```
+
+```bash
+# Run the development server with hot reloading
+elizaos dev
+```
+
+```bash
+# OR start the development server without hot reloading
+elizaos start
+# Note: When using 'start', you need to rebuild after changes:
+    # rm -rf dist 2>/dev/null || rimraf dist
+    # bun run build
+```
+
+You can also use bun to build and start up the project
+
+```bash
+bun run build
+bun dev
+```
+
+## License
 
 This project is licensed under [MIT License](LICENSE.md).
 
-### Acknowledgements
+## Acknowledgements
 
 Special thanks to the following contributors :heart:
 - [@alexlofe](https://github.com/alexlofe)

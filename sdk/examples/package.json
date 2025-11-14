@@ -1,0 +1,23 @@
+{
+  "name": "vechain-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@vechain/sdk-core": "^1.2.0",
+    "@vechain/sdk-network": "^1.2.0",
+    "code": "^5.2.4",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "websockets": "^0.2.0",
+    "ws": "^8.18.2"
+  }
+}
