@@ -1,16 +1,9 @@
 {
-    "version": "0.2",
-    "ignorePaths": [],
-    "dictionaryDefinitions": [],
-    "dictionaries": [],
-    "words": [
-        "CODEOWNERS",
-        "doctocat",
-        "Marino",
-        "octo",
-        "octocat",
-        "octocats"
-    ],
-    "ignoreWords": [],
-    "import": []
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": ["CODEOWNERS", "doctocat", "Marino", "octo", "octocat", "octocats"],
+  "ignoreWords": [],
+  "import": []
 }
