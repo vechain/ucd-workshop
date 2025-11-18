@@ -53,7 +53,7 @@ const vechainBalanceAction: any = {
 
   examples: [
     [
-      { user: "user", content: { text: "balance 0x01d6b50b31c18d7f81ede43935cadf79901b0ea0" } },
+      { user: "user", content: { text: "balance 0xFE10bbff63c5730F698a1D55EA44030Fb462Bbf3" } },
       { user: "assistant", content: { text: "Balance for 0x... VET: 123 VTHO: 4" } }
     ]
   ],
@@ -96,7 +96,7 @@ const vechainAliasAction: any = {
 
   examples: [
     [
-      { user: "user", content: { text: "alias 0x9366662519dc456bd5b8bc4ee4b6852338d82f08" } },
+      { user: "user", content: { text: "alias 0xFE10bbff63c5730F698a1D55EA44030Fb462Bbf3" } },
       { user: "assistant", content: { text: "Alias for 0x... is example.vet" } }
     ]
   ],
@@ -144,7 +144,7 @@ const vechainTransfersAction: any = {
 
   examples: [
     [
-      { user: "user", content: { text: "transfers 0x9366662519dc456bd5b8bc4ee4b6852338d82f08" } },
+      { user: "user", content: { text: "transfers 0xFE10bbff63c5730F698a1D55EA44030Fb462Bbf3" } },
       { user: "assistant", content: { text: "Last transfer from 0x...:\nFrom: 0x...\nTo: 0x...\nValue: 1.23 VET" } }
     ]
   ],
