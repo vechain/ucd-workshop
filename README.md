@@ -35,7 +35,7 @@ know how to extend its capabilities to answer even more complex prompts.
 - [How to](#how-to)
   - [Learn more about the VeChain SDK](#learn-more-about-the-vechain-sdk)
   - [Run the VeChain SDK interactively](#run-the-vechain-sdk-interactively)
-  - [Resources](#resources)
+- [Resources](#resources)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -162,7 +162,7 @@ var thor = ThorClient.at('https://mainnet.vechain.org');
 await thor.blocks.getBlockCompressed('best');
 ```
 
-### Resources
+## Resources
 
 1. Thor client: https://github.com/vechain/thor
 2. VeChain API documentation: https://mainnet.vechain.org
