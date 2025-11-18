@@ -32,6 +32,10 @@ know how to extend its capabilities to answer even more complex prompts.
     - [1. Install the ElizaOS CLI and project dependencies](#1-install-the-elizaos-cli-and-project-dependencies)
     - [2. Configure your OpenAI API key](#2-configure-your-openai-api-key)
     - [3. Run the agent](#3-run-the-agent)
+- [How to](#how-to)
+  - [Learn more about the VeChain SDK](#learn-more-about-the-vechain-sdk)
+  - [Run the VeChain SDK interactively](#run-the-vechain-sdk-interactively)
+  - [Resources](#resources)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -122,6 +126,54 @@ By default the development server runs at [http://localhost:3000](http://localho
 > rm -rf dist 2>/dev/null || rimraf dist
 > bun run build
 > ```
+
+## How to
+
+### Learn more about the VeChain SDK
+
+The `sdk/examples` directory contains a variety of scripts that demonstrate how to use the VeChain
+SDK to interact with the blockchain. You can run these scripts with node like so:
+
+```bash
+cd sdk/examples
+node readBlocks.js
+```
+
+You can also find more information about the VeChain SDK in the 
+[VeChain SDK documentation](https://docs.vechain.org/developer-resources/sdks-and-providers/sdk).
+
+### Run the VeChain SDK interactively
+
+You can run the VeChain SDK interactively in the node CLI:
+```bash
+cd sdk
+npm install
+node
+```
+
+Then import the VeChain SDK:
+```js
+const { ThorClient } = await import("@vechain/sdk-network");
+```
+
+Then run any javascript code you want, for example:
+```js
+var thor = ThorClient.at('https://mainnet.vechain.org');
+await thor.blocks.getBlockCompressed('best');
+```
+
+### Resources
+
+1. Thor client: https://github.com/vechain/thor
+2. VeChain API documentation: https://mainnet.vechain.org
+3. VeChain SDK documentation: https://docs.vechain.org/developer-resources/sdks-and-providers/sdk
+4. VeChain SDK examples: https://github.com/vechain/vechain-sdk-js/tree/master/examples
+5. VeWorld Wallets for iOS, Android and Chrome: https://www.veworld.com/
+6. VeBetter DAO: https://vebetter.com/
+7. VeBetter Grants: https://vebetter.com/grants
+8. ElizaOS Documentation: https://docs.elizaos.ai/
+9. ElizaOS Plugins: https://github.com/elizaos-plugins
+10. Workshop slides: https://github.com/vechain/ucd-workshop/blob/main/.github/presentation.pdf
 
 ## License
 
