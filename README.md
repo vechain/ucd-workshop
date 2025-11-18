@@ -55,7 +55,7 @@ node examples/readBlocks.js
 
 If you see the latest block data printed to the terminal at this point, you are ready to go!
 
-Feel free to explore and run more examples scripts.
+Feel free to explore and run more example scripts.
 
 #### Agent setup
 
