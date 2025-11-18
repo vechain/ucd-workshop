@@ -1,9 +1,28 @@
 {
   "version": "0.2",
-  "ignorePaths": [],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "*.tsbuildinfo",
+    "package.json"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": ["CODEOWNERS", "doctocat", "Marino", "octo", "octocat", "octocats"],
-  "ignoreWords": [],
+  "words": [
+    "CODEOWNERS",
+    "doctocat",
+    "elizaos",
+    "Marino",
+    "octo",
+    "octocat",
+    "octocats",
+    "vechain",
+    "vebetterdao",
+    "stargate",
+    "publicabi",
+    "keccak",
+    "VTHO"
+  ],
+  "ignoreWords": ["RZLT", "alexlofe", "kgapos", "getsigner"],
   "import": []
 }

@@ -80,7 +80,7 @@ interface PanelProps {
  * Example panel component for the plugin system
  */
 const PanelComponent: React.FC<PanelProps> = ({ agentId }) => {
-  return <div>Helllo {agentId}!</div>;
+  return <div>Hello {agentId}!</div>;
 };
 
 // Export the panel configuration for integration with the agent UI
