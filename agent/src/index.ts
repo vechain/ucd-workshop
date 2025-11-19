@@ -2,7 +2,7 @@ import { character } from "./character.ts";
 
 import { getAlias } from "./vechain/alias.js";
 import { getAccountBalances } from "./vechain/account.js";
-import { getLastTransfers } from "./vechain/transfers.js";
+import { getLastTransfer } from "./vechain/transfers.js";
 
 // extract 0x... address
 function extractAddress(raw: string): string | null {
@@ -64,7 +64,7 @@ const vechainBalanceAction: any = {
 // TODO: Implement the `vechainAliasAction` for challenge #2
 
 // Return latest transfer for a VeChain account
-// TODO: Implement the `vechainTransfersAction` for challenge #3
+// TODO: Implement the `vechainTransferAction` for challenge #3
 
 // Return latest stargate deposit for a VeChain account
 // TODO: Implement the `vechainStargateDepositsAction` for challenge #4
