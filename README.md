@@ -176,12 +176,13 @@ await thor.blocks.getBlockCompressed('best');
 2. VeChain API documentation: https://mainnet.vechain.org
 3. VeChain SDK documentation: https://docs.vechain.org/developer-resources/sdks-and-providers/sdk
 4. VeChain SDK examples: https://github.com/vechain/vechain-sdk-js/tree/master/examples
-5. VeWorld Wallets for iOS, Android and Chrome: https://www.veworld.com/
-6. VeBetter DAO: https://vebetter.com/
-7. VeBetter Grants: https://vebetter.com/grants
-8. ElizaOS Documentation: https://docs.elizaos.ai/
-9. ElizaOS Plugins: https://github.com/elizaos-plugins
-10. Workshop slides: https://github.com/vechain/ucd-workshop/blob/main/.github/presentation.pdf
+5. VeChain Faucet (free VET & VTHO in testnet): https://faucet.vecha.in
+6. VeWorld Wallets for iOS, Android and Chrome: https://www.veworld.com
+7. VeBetter DAO: https://vebetter.com
+8. VeBetter Grants: https://vebetter.com/grants
+9. ElizaOS Documentation: https://docs.elizaos.ai
+10. ElizaOS Plugins: https://github.com/elizaos-plugins
+11. Workshop slides: https://github.com/vechain/ucd-workshop/blob/main/.github/presentation.pdf
 
 ## License
 
