@@ -3,6 +3,8 @@ import { character } from "./character.ts";
 import { getAlias } from "./vechain/alias.js";
 import { getAccountBalances } from "./vechain/account.js";
 import { getLastTransfer } from "./vechain/transfers.js";
+import { getLastStargateDeposit } from "./vechain/stargateDeposits.js";
+import { getLastStargateWithdrawal } from "./vechain/stargateWithdrawals.js";
 
 // extract 0x... address
 function extractAddress(raw: string): string | null {

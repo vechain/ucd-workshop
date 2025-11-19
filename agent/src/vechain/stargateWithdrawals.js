@@ -1,6 +1,6 @@
 import { ThorClient } from "@vechain/sdk-network";
 
-export async function getLastTransfers(address, network = process.env.VECHAIN_NETWORK) {
+export async function getLastStargateWithdrawal(address, network = process.env.VECHAIN_NETWORK) {
   const thor = ThorClient.at(network);
 
   const withdrawals = await thor.logs.filterTransferLogs({
