@@ -1,8 +1,8 @@
 import { character } from "./character.ts";
 
-import { getAlias } from "../vechain/alias.js";
-import { getAccountBalances } from "../vechain/account.js";
-import { getLastTransfers } from "../vechain/transfers.js";
+import { getAlias } from "./vechain/alias.js";
+import { getAccountBalances } from "./vechain/account.js";
+import { getLastTransfers } from "./vechain/transfers.js";
 
 // extract 0x... address
 function extractAddress(raw: string): string | null {
@@ -16,11 +16,12 @@ function extractAddress(raw: string): string | null {
 /** 
  * VECHAIN TOOLING HANDLING STARTS HERE
  */
-// Process VeChain Balances
+
+// Return VET and VTHO balances for a VeChain account
 const vechainBalanceAction: any = {
   name: "VECHAIN_WALLET_BALANCE",
   similes: ["VET_BALANCE", "CHECK_BALANCE", "BALANCE"],
-  description: "Return VET and VTHO balances for a VeChain address",
+  description: "Return VET and VTHO balances for a VeChain account",
 
   validate: async (_runtime: any, message: any) => {
     const text = message?.content?.text || "";
@@ -59,104 +60,17 @@ const vechainBalanceAction: any = {
   ],
 };
 
-// Process VeChain VNS Alias
-const vechainAliasAction: any = {
-  name: "VECHAIN_WALLET_ALIAS",
-  similes: ["ALIAS", "NAME", "IDENTITY"],
-  description: "Return VeChain domain alias for a wallet address",
+// Return VeChain VNS alias for a VeChain account
+// TODO: Implement the `vechainAliasAction` for challenge #2
 
-  validate: async (_runtime: any, message: any) => {
-    const text = message?.content?.text || "";
-    const hasAddr = /\b0x[a-fA-F0-9]{40}\b/i.test(text);
-    const hasKeyword = /\b(alias|name|identity)\b/i.test(text);
-    return hasAddr || hasKeyword;
-  },
+// Return latest transfer for a VeChain account
+// TODO: Implement the `vechainTransfersAction` for challenge #3
 
-  handler: async (_runtime: any, message: any, _state: any, _options: any, callback: any) => {
-    const text = message?.content?.text || "";
-    const address = extractAddress(text);
+// Return latest stargate deposit for a VeChain account
+// TODO: Implement the `vechainStargateDepositsAction` for challenge #4
 
-    if (!address) {
-      await callback({ text: "Provide an address. Example: alias 0xYourWalletHere" });
-      return true;
-    }
-
-    try {
-      const { alias } = await getAlias(address);
-      await callback({
-        text: alias ? `Alias for ${address}: ${alias}` : `No alias is registered for ${address}.`
-      });
-    } catch (e: any) {
-      console.error("[alias error]", e?.message || e);
-      await callback({ text: "Couldn't fetch alias right now. Try again shortly." });
-    }
-
-    return true;
-  },
-
-  examples: [
-    [
-      { user: "user", content: { text: "alias 0xFE10bbff63c5730F698a1D55EA44030Fb462Bbf3" } },
-      { user: "assistant", content: { text: "Alias for 0x... is example.vet" } }
-    ]
-  ],
-};
-
-// Process VeChain Transfers from a specific wallet
-const vechainTransfersAction: any = {
-  name: "VECHAIN_WALLET_TRANSFERS",
-  similes: ["TRANSFERS", "TRANSFER", "LAST_TRANSFER"],
-  description: "Return most recent transfers from a VeChain wallet address",
-
-  validate: async (_runtime: any, message: any) => {
-    const text = message?.content?.text || "";
-    const hasAddr = /\b0x[a-fA-F0-9]{40}\b/i.test(text);
-    const hasKeyword = /\b(transfers?|tx|transaction|last)\b/i.test(text);
-    return hasAddr || hasKeyword;
-  },
-
-  handler: async (_runtime: any, message: any, _state: any, _options: any, callback: any) => {
-    const text = message?.content?.text || "";
-    const address = extractAddress(text);
-
-    if (!address) {
-      await callback({ text: "Provide an address. Example: transfers 0xYourWalletHere" });
-      return true;
-    }
-
-    try {
-      const tx = await getLastTransfers(address);
-      if (!tx || tx.value === "0") {
-        await callback({ text: `No transfers found for ${address}.` });
-        return true;
-      }
-
-      await callback({
-        text: `Last transfer from ${address}:\nFrom: ${tx.from}\nTo: ${tx.to}\nValue: ${tx.value} VET`
-      });
-    } catch (e: any) {
-      console.error("[transfers error]", e?.message || e);
-      await callback({ text: "Couldn't fetch transfers right now. Try again shortly." });
-    }
-
-    return true;
-  },
-
-  examples: [
-    [
-      { user: "user", content: { text: "transfers 0xFE10bbff63c5730F698a1D55EA44030Fb462Bbf3" } },
-      { user: "assistant", content: { text: "Last transfer from 0x...:\nFrom: 0x...\nTo: 0x...\nValue: 1.23 VET" } }
-    ]
-  ],
-};
-
-/** 
- * ADD STARGATE DEPOSITS HANDLER HERE 
-*/
-
-/** 
- * ADD STARGATE WITHDRAWALS HANDLER HERE 
-*/
+// Return latest stargate withdrawal for a VeChain account
+// TODO: Implement the `vechainStargateWithdrawalsAction` for challenge #4
 
 /** 
  * VECHAIN TOOLING HANDLING ENDS HERE
@@ -166,8 +80,7 @@ const vechainTransfersAction: any = {
 const initCharacter = ({ runtime }: { runtime: any }) => {
   console.log("Initializing character:", character?.name);
   runtime.registerAction(vechainBalanceAction);
-  runtime.registerAction(vechainAliasAction);
-  runtime.registerAction(vechainTransfersAction);
+  // TODO: Register the actions for challenges #2, #3 and #4 here
 };
 
 // Define agent and project with the exact shapes the loader looks for
