@@ -49,11 +49,19 @@ blockchain related user prompts and interacts with the blockchain in real time
 ### Prerequisites
 
 - A laptop with internet connection
-- [VS Code](https://code.visualstudio.com/), or similar code editor
-- [NodeJS](https://nodejs.org/en), tested with `v24.11.1`
-- [Bun](https://bun.com/docs/installation), tested with `v1.3.2`
 - OpenAI API key, a temporary key will be provided to workshop attendees
+- A code editor, such as [VS Code](https://code.visualstudio.com/) or equivalent
+- [NodeJS](https://nodejs.org/en), this workshop was tested with `v24.11.1`
+- [Bun](https://bun.com/docs/installation), this workshop was tested with `v1.3.2`
+   ```bash
+   curl -fsSL https://bun.com/install | bash
+   ```
 
+   Restart your terminal or source your user profile. Then check the version of bun:
+   
+   ```bash
+   bun --version
+   ```
 ### SDK setup
 
 Open your favorite terminal and run the following commands:
@@ -82,7 +90,7 @@ Open your favorite terminal and run the following commands:
 cd agent
 # Install the ElizaOS CLI
 bun i -g @elizaos/cli
-# Check the version of the ElizaOS CLI
+# Check the version of the ElizaOS CLI. This workshop was tested with `1.6.4`
 elizaos --version
 # Install the project dependencies
 npm install
